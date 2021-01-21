@@ -1,0 +1,171 @@
+/*======================== HTML Tags ========================*/
+/* Xue's work here */
+body{
+	background-image: url("../img/default.jpg");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-blend-mode: darken;
+}
+
+/* Saher's work starts here*/
+main {
+	width: 80vw;
+	margin: auto;
+	font-family: "Times New Roman",serif;
+}
+
+h1,
+h2 {
+	text-align: center;
+	font-family: Arial,sans-serif;
+}
+/* Saher's work ends here */
+
+/*======================== Navigation IDs and Anchor tags ========================*/
+/* Saher's work starts here */
+#navigation {
+	display: flex;
+	justify-content: flex-end;
+	position:sticky;
+	top:0;
+	background-color: purple; 
+	font-size: 2.3ch;
+	height: 25px;
+}
+
+
+#navigation a:link,
+a:visited{
+	text-decoration: none;
+	color: yellow; 
+}
+
+#navigation a{
+	margin: 0 0 0 20px;
+}
+/* Saher's work ends here */
+
+/* Xue's work here */
+/* When the mouse hovers over, the element color changes to white */
+#navigation a:hover{
+	color: white;
+}
+
+#contact a:hover{
+	color: white;
+}
+
+/*======================== Game Board ========================*/
+/* Chenfei's work was in html, Saher just translated it and put it in CSS*/
+#gametable{
+	text-align: center;
+}
+
+#gametable input{
+	width: 100px;
+	height: 100px;
+}
+
+#gametable table{
+	border:2px solid blue;
+	width:"300";
+	height:"300";
+	margin: 0 auto;
+}
+
+#nextstep input{
+	width: 100px;
+	height: 45px;
+	margin: 10px;
+}
+/*Chenfei's work, translated to CSS by Saher, ends here*/
+
+/*======================== Dark Mode ========================*/
+
+/*Abdalla's work starts here*/
+/*I set the width and the height of the dark mode toggle button to 100px by 100px*/
+#darkmode {
+	width: 100px;
+	height: 100px;
+}
+/*I used the code below to set the background color and font color of dark mode*/
+.dark-mode {
+  background-color: #29282b;
+  color: #FFFFFF;
+}
+/*Abdalla's work ends here*/
+
+/*======================== History section ========================*/
+
+/*Yanhao's work*/
+#firstTwo{
+	float: left;
+	width: 49%;
+	height: 300px;
+	font-size: larger;
+}
+#lastTwo{
+	float: right;
+	width: 49%;
+	height: 300px;
+	font-size: larger;
+}
+
+/*======================== Instructions section ========================*/
+/* Saher's work starts here */
+#instructions{
+	text-align: center;
+}
+
+#instructions > ol{
+	list-style: square;
+	display: inline-block;
+	text-align: left;
+	font-size: larger;
+	font-weight: bolder;
+}
+
+/*======================== Bottom of the page ========================*/
+
+#contact{
+	display: flex;
+	color: yellow;
+	justify-content: space-around;
+	background-color:purple;
+	text-align: center;
+}
+
+#contact a{
+	color: #B8860B;
+}
+/* Saher's work ends here */
+
+#names{
+	font-size: 120%;
+}
+
+#intro{
+	font-size: larger
+}
+
+/*======================== images ========================*/
+#ticimg{
+	width: 50px;
+}
+
+#ticimg2{
+	width: 50px;
+	float: right;
+}
+
+/* Xue's work here */
+.icon {
+    width: 50px;
+    height: 50px;
+}
+
+#contact img{
+	height: 250px;
+	width: 187px;
+}

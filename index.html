@@ -1,0 +1,187 @@
+<!-- This website is a group project done by: Saher Anwar, Abdalla Elsebai, Yanhao Li, Chenfei Hu and Xue Wang. It basically 
+	 incorporates a standard TIC-TAC-TOE game. -->
+
+<!DOCTYPE html>
+
+<html lang="en">
+	
+    <head>
+        <meta charset="utf-8">
+        <title>TIC-TAC-TOE game</title>
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <script src="js/gameCode.js"></script>
+		<script src="js/darkMode.js"></script>
+	</head>
+
+	<body>
+		<!-- Saher Anwar's work starts here -->
+		<!-- implemented nav bar to stick to the top like an actual website. It includes links to different sections of 
+			 the website. The entire webpage's content, including this, was Bhavya's work. -->
+		<!-- Nav bar allows navigation to the various content on the page -->
+	    <nav id="navigation">
+	          <a href="#intro">Intro</a>
+	          <a href="#history">History</a>
+	          <a href="#instructions">How to Play</a>
+	          <a href="#gametable">The Game</a>
+	    </nav>
+		<!-- Saher's work ends here -->
+
+		<!-- header contains images and headline of the page -->
+	    <header>
+	    	<img id="ticimg" src="img/tictactoe.png" alt="tic-tac-toe">
+	    	<img id="ticimg2" src="img/tictactoe.png" alt="tic-tac-toe">
+	    	<h1>TIC-TAC-TOE</h1>
+		    <!-- source: https://www.flaticon.com/premium-icon/tic-tac-toe_1175477 -->
+	    </header>
+
+	    <main>
+	    	<!-- an introduction to what this website is about -->
+		    <section id="intro">
+
+		      	<h1><img class="icon" src="img/icon1.icon" alt="icon1"> Introduction</h1>
+		      	<p>Our group has recreated the age old classic game TIC-TAC-TOE, which is bound to bring back the memories of boring lessons back in school. Our webpage includes the history of the game and how it grew to be the game as we know it today. It also includes basic instructions for first time players. This game will be user vs. computer. Hope you win!</p>
+
+		    </section>
+
+		    <!-- a brief history of the TIC-TAC-TOE game -->
+	      	<section id="history">
+
+	            <h2><img class="icon" src="img/icon2.icon" alt="icon2"> Brief Histroy and the Game Today</h2>
+
+	            <div id="firstTwo">
+
+		            <p>TIC-TAC-TOE is an ancient game that billions of people have played over the course of history. While some experts believe the game dates back to the ancient Egyptians, others believe it evolved from an ancient Roman game called Terni Lapilli.</p>
+
+		            <p>Terni Lapilli was played on a similar three-by-three grid. In fact, these grids can be found scratched onto all sorts of surfaces around ancient Rome. However, no markings have ever been found within the grids, leading historians to believe the game was played with movable pieces rather than by making markings, such as Xs and Os.</p>
+
+	            </div>
+
+	            <div id="lastTwo">
+
+		            <p> Experts believe the name tic-tac-toe came about sometime in the 1800s. That's when a popular game called either "ticktack" or "tic-tac-toe" was played by blindly throwing a pencil at a slate marked with numbers. Your score was tallied by counting the numbers hit with the pencil. This game is no longer played today, but its name survives nonetheless. Historians believe the name derived from the sound the pencil made when it hit the slate.</p>
+
+		            <p>The modern game we know as tic-tac-toe is played on a nine-square grid created by drawing lines to create three horizontal rows and three vertical columns. With X going first, players alternate marking the squares with Xs and Os, trying to achieve three marks in a row either horizontally, vertically, or diagonally.</p>
+
+	            </div>
+
+
+	            <!--Source : https://wonderopolis.org/wonder/how-old-is-tic-tac-toe-->
+      		</section>
+
+      		<!-- Instructions on how to play the game -->
+	      	<section id="instructions">
+
+	            <h2><img class="icon" src="img/icon3.icon" alt="icon3"> How To Play</h2>
+	            <ol>
+
+	                <li>The game is played on a grid that's 3 squares by 3 squares.</li>
+	                <li>You are X, your friend (or the computer in this case) is O. Players take turns putting their marks in empty squares.</li>
+	                <li>The first player to get 3 of her marks in a row (up, down, across, or diagonally) is the winner.</li>
+	                <li>When all 9 squares are full, the game is over. If no player has 3 marks in a row, the game ends in a tie.</li>
+	                <!-- Source: https://www.exploratorium.edu/brain_explorer/tictactoe.html -->
+
+	            </ol>
+
+	      	</section>
+
+	      	<!-- This section contains the game board or game table -->
+	      	<section id="gametable">
+
+	            <h2><img class="icon" src="img/icon4.icon" alt="icon4"> The Game</h2>
+
+	            <table>
+	              <tr>
+	                    <td><input type="button" id="1" value="  " onclick="bn(0,0)"/></td>
+	                    <td><input type="button" id="2" value="  " onclick="bn(0,1)"/></td>
+	                    <td><input type="button" id="3" value="  " onclick="bn(0,2)"/></td>
+	              </tr>
+
+	              <tr>
+	                    <td><input type="button" id="4" value="  " onclick="bn(1,0)"/></td>
+	                    <td><input type="button" id="5" value="  " onclick="bn(1,1)"/></td>
+	                    <td><input type="button" id="6" value="  " onclick="bn(1,2)"/></td>
+	              </tr>
+
+	              <tr >
+	                    <td><input type="button" id="7" value="  " onclick="bn(2,0)"/></td>
+	                    <td><input type="button" id="8" value="  " onclick="bn(2,1)"/></td>
+	                    <td><input type="button" id="9" value="  " onclick="bn(2,2)"/></td>
+	              </tr>
+	            </table>
+
+	            <!-- division contains buttons if the user wants to play again or surrender -->
+	            <div id="nextstep" >
+		            <input type="button" value="RESTART" onclick="location.reload() "/>
+		            <input type="button" value="SURRENDER" onclick="lose()"/>
+	      		</div>
+
+	      	</section>
+
+	    </main>
+
+	      <!--Abdalla's work starts here-->
+	      <!--The following code is how I set up the toggle button so that a user could click on it, and how I linked the toggle button to the CSS code which styled what dark mode will look like.
+	      -->
+	    <button type="button" name="Dark mode" id="darkmode" onclick="darkMode()">Dark mode</button>
+	      <!--Abdalla's work ends here-->
+
+	    <!-- Saher's work starts here -->
+	    <!-- Implemented a contact list at the bottom of the page for each person that assisted in developing the website.
+	    	 It also includes the person's picture, the links to their social platforms and emails, and a quote said by the 
+	    	 person. Yanhao Li was responsible for this part and she did play her role, however, I felt like I could add more 
+	    	 to it so I somewhat revamped it and wrote this code myself. Some credit goes to her as well.  -->
+    	 <!-- This footer contains contact details about the developers of the website -->
+	    <footer id="contact">
+
+      		<div>
+      			<h3>Person Name</h3>
+      			<img src="img/wallpaper.jfif" alt="Picture of an ape">
+      			<p>Sleep all day. It's healthy.</p>
+      			<p><a href="https://www.linkedin.com/in/saher-ziauddin">LinkedIn</a></p>
+      			<p><a href="https://www.instagram.com/saher_1620/">Instagram</a></p>
+      			<p><a href="mailto:saher.ziauddin@dal.ca">Email</a></p>
+      		</div>
+
+      		<div>
+      			<h3>Abdalla Elsebai</h3>
+      			<img src="img/Abdalla.jpg" alt="Picture of Abdalla Elsebai">
+      			<p>Sleep all day. It's healthy.</p>
+      			<p><a href="https://www.linkedin.com">LinkedIn</a></p>
+      			<p><a href="https://www.instagram.com">Instagram</a></p>
+      			<p><a href="mailto:Abdalla.Elsebai@dal.ca">Email</a></p>
+      		</div>
+
+      		<div>
+      			<h3>Saher Anwar</h3>
+      			<img src="img/Saher.jpeg" alt="Picture of Saher Anwar">
+      			<p>I wish I was fat and tall</p>
+      			<p><a href="https://www.linkedin.com/in/saher-ziauddin">LinkedIn</a></p>
+      			<p><a href="https://www.instagram.com/saher_1620/">Instagram</a></p>
+      			<p><a href="mailto:saher.ziauddin@dal.ca">saher.ziauddin@dal.ca</a></p>
+      		</div>
+
+      		<div>
+      			<h3>Xue Wang</h3>
+      			<img src="img/Xue.jpeg" alt="Picture of Xue Wang">
+      			<p>Sleep all day. It's healthy.</p>
+      			<p><a href="https://www.linkedin.com">LinkedIn</a></p>
+      			<p><a href="https://www.instagram.com">Instagram</a></p>
+      			<p><a href="mailto:xz569779@dal.ca">Email</a></p>
+      		</div>
+
+			<div>
+				<h3>Yanhao Li</h3>
+				<img src="img/Yanhao.jpg" alt="Picture of Yanhao">
+				<p>Sleep all day. It's healthy.</p>
+				<p><a href="https://www.linkedin.com/in/saher-ziauddin">LinkedIn</a></p>
+				<p><a href="https://www.instagram.com">Instagram</a></p>
+				<p><a href="mailto:yn527901@dal.ca">yn527901@dal.ca</a></p>
+			</div>
+
+		</footer>
+		<!-- Saher's work ends here -->
+		<!-- What Saher learnt from this group development experience: I learnt that distributing work amongst your teammates 		 is difficult because I do not have much experience in developing a website thus I do not know how much work is 		 required. I learnt to rely on other people when distributing work because not only does it save time, but it builds
+			 trust between your teammates. -->
+	</body>
+
+</html>
